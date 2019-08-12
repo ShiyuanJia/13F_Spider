@@ -62,7 +62,7 @@ def run(start, end):
 			f.close()
 			# url = fileUrl.readline()
 			# url = url.strip('\n')
-			count = count + 1
+			count = int(errFile.readline())
 			continue
 		# buff = buff.replace('\\r', '')
 
@@ -81,13 +81,13 @@ def run(start, end):
 				f.close()
 				# url = fileUrl.readline()
 				# url = url.strip('\n')
-				count = count + 1
+				count = int(errFile.readline())
 				continue
 			result = result[0] + '</ns1:informationTable>'
 			f.write(result)
 			f.flush()
 			f.close
-			count = count + 1
+			count = int(errFile.readline())
 			continue
 
 		result = result[0] + ' </informationTable>'
@@ -100,7 +100,7 @@ def run(start, end):
 		#
 		# url = fileUrl.readline()
 		# url = url.strip('\n')
-		count = count + 1
+		count = int(errFile.readline())
 
 
 		# print(result)
